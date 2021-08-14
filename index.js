@@ -1,7 +1,7 @@
 const {Client,Intents,Collection} = require('discord.js')
 const client = new Client({intents:[Intents.FLAGS.GUILDS,Intents.FLAGS.GUILD_MESSAGES,Intents.FLAGS.GUILD_MEMBERS]})
 const fs = require('fs');
-const token = ""
+const {token} = require('./config.json')
 const keepAlive = require('./server.js')
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
